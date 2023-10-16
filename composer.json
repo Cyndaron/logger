@@ -1,0 +1,32 @@
+{
+  "name": "cyndaron/logger",
+  "description": "PSR3-compatible loggers",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Cyndaron\\Logger\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.1",
+    "psr/log": "^2.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpstan/phpstan": "*",
+    "friendsofphp/php-cs-fixer": "*"
+  },
+  "scripts": {
+    "phpstan": [
+      "vendor/bin/phpstan analyse src --level 9"
+    ],
+    "cs-check": [
+      "vendor/bin/php-cs-fixer fix src/ --allow-risky=yes --dry-run --diff"
+    ],
+    "cs-fix": [
+      "vendor/bin/php-cs-fixer fix src/ --allow-risky=yes"
+    ]
+  }
+}

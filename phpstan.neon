@@ -1,0 +1,4 @@
+parameters:
+    bootstrapFiles:
+      - .phpstan_bootstrap.php
+    checkMissingIterableValueType: true
